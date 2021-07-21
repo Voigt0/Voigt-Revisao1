@@ -1,6 +1,44 @@
 <!DOCTYPE html>
 <?php
-  $personagem = isset($_POST["personagem"]) ? $_POST["personagem"] : "1";
+  $personagem[1] = 0;
+  if(isset($_POST["personagem1"])) $personagem[1] = $_POST["personagem1"];
+
+  $personagem[2] = 0;
+  if(isset($_POST["personagem2"])) $personagem[2] = $_POST["personagem2"];
+
+  $personagem[3] = 0;
+  if(isset($_POST["personagem3"])) $personagem[3] = $_POST["personagem3"];
+  
+  $personagem[4] = 0;
+  if(isset($_POST["personagem4"])) $personagem[4] = $_POST["personagem4"];
+  
+  $personagem[5] = 0;
+  if(isset($_POST["personagem5"])) $personagem[5] = $_POST["personagem5"];
+  
+  $personagem[6] = 0;
+  if(isset($_POST["personagem6"])) $personagem[6] = $_POST["personagem6"];
+  
+  $personagem[7] = 0;
+  if(isset($_POST["personagem7"])) $personagem[7] = $_POST["personagem7"];
+  
+  $personagem[8] = 0;
+  if(isset($_POST["personagem8"])) $personagem[8] = $_POST["personagem8"];
+  
+  $personagem[9] = 0;
+  if(isset($_POST["personagem9"])) $personagem[9] = $_POST["personagem9"];
+  
+  $personagem[10] = 0;
+  if(isset($_POST["personagem10"])) $personagem[10] = $_POST["personagem10"];
+
+  //$personagem[2] = isset($_POST["personagem2"]) ? $_POST["personagem2"] : "0";
+  //$personagem[3] = isset($_POST["personagem3"]) ? $_POST["personagem3"] : "0";
+  //$personagem[4] = isset($_POST["personagem4"]) ? $_POST["personagem4"] : "0";
+  //$personagem[5] = isset($_POST["personagem5"]) ? $_POST["personagem5"] : "0";
+  //$personagem[6] = isset($_POST["personagem6"]) ? $_POST["personagem6"] : "0";
+  //$personagem[7] = isset($_POST["personagem7"]) ? $_POST["personagem7"] : "0";
+  //$personagem[8] = isset($_POST["personagem8"]) ? $_POST["personagem8"] : "0";
+  //$personagem[9] = isset($_POST["personagem9"]) ? $_POST["personagem9"] : "0";
+  //$personagem[10] = isset($_POST["personagem10"]) ? $_POST["personagem10"] : "0";
 ?>
 <html lang="pt-BR">
 <head>
@@ -9,64 +47,80 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar navbar-dark bg-primary">
-        <div class="container-fluid">
-            <span class="navbar-brand mb-2 h3">Episódio 1</span>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Episódio 1</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index1.php">Select</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index2.php">Radio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index3.php">Checkbox</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Radio</a>
+        </li>
+    </div>
+  </div>
     </nav>
     <content>
         <br><br>
-        <form method="post" class="form-check" style="margin: 0% 30% 0% 2%; float: left;">
-            <label class="form-check-label" for="flexRadioDisabled">Luke Skywalker</label>
-            <input type="radio" <?php if ($personagem == 1) echo "checked"; ?> class="form-check-input" id="personagem1" name="personagem" value="1">
+        <form method="POST" class="form-check" style="margin: 0% 30% 0% 2%; float: left;">
+            <input type="checkbox" <?php if ($personagem[1] == 1) echo "checked"; ?> class="form-check-input" id="personagem1"  value="1">
+            <label class="form-check-label" for="personagem">Luke Skywalker</label>
             <br>
-            <label class="form-check-label" for="flexRadioDisabled">Princesa Leia</label>
-            <input type="radio" <?php if ($personagem == 2) echo "checked"; ?> class="form-check-input" id="personagem2" name="personagem" value="2">
+            <input type="checkbox" <?php if ($personagem[2] == 1) echo "checked"; ?> class="form-check-input" id="personagem2"  value="1">
+            <label class="form-check-label" for="personagem2">Princesa Leia</label>
             <br>
-            <label class="form-check-label" for="flexRadioDisabled">Obi-Wan Kenobi</label>
-            <input type="radio" <?php if ($personagem == 3) echo "checked"; ?> class="form-check-input" id="personagem3" name="personagem" value="3">
+            <input type="checkbox" <?php if ($personagem[3] == 1) echo "checked"; ?> class="form-check-input" id="personagem3"  value="1">
+            <label class="form-check-label" for="personagem3">Obi-Wan Kenobi</label>
             <br>
-            <label class="form-check-label" for="flexRadioDisabled">Han Solo</label>
-            <input type="radio" <?php if ($personagem == 4) echo "checked"; ?> class="form-check-input" id="personagem4" name="personagem" value="4">
+            <input type="checkbox" <?php if ($personagem[4] == 1) echo "checked"; ?> class="form-check-input" id="personagem4"  value="1">
+            <label class="form-check-label" for="personagem4">Han Solo</label>
             <br>
-            <label class="form-check-label" for="flexRadioDisabled">Chewbacca</label>
-            <input type="radio" <?php if ($personagem == 5) echo "checked"; ?> class="form-check-input" id="personagem5" name="personagem" value="5">
+            <input type="checkbox" <?php if ($personagem[5] == 1) echo "checked"; ?> class="form-check-input" id="personagem5"  value="1">
+            <label class="form-check-label" for="personagem5">Chewbacca</label>
             <br>
-            <label class="form-check-label" for="flexRadioDisabled">R2-D2</label>
-            <input type="radio" <?php if ($personagem == 6) echo "checked"; ?> class="form-check-input" id="personagem6" name="personagem" value="6">
+            <input type="checkbox" <?php if ($personagem[6] == 1) echo "checked"; ?> class="form-check-input" id="personagem6"  value="1">
+            <label class="form-check-label" for="personagem6">R2-D2</label>
             <br>
-            <label class="form-check-label" for="flexRadioDisabled">C-3PO</label>
-            <input type="radio" <?php if ($personagem == 7) echo "checked"; ?> class="form-check-input" id="personagem7" name="personagem" value="7">
+            <input type="checkbox" <?php if ($personagem[7] == 1) echo "checked"; ?> class="form-check-input" id="personagem7"  value="1">
+            <label class="form-check-label" for="personagem7">C-3PO</label>
             <br>
-            <label class="form-check-label" for="flexRadioDisabled">Boba Fett</label>
-            <input type="radio" <?php if ($personagem == 8) echo "checked"; ?> class="form-check-input" id="personagem8" name="personagem" value="8">
+            <input type="checkbox" <?php if ($personagem[8] == 1) echo "checked"; ?> class="form-check-input" id="personagem8"  value="1">
+            <label class="form-check-label" for="personagem8">Boba Fett</label>
             <br>
-            <label class="form-check-label" for="flexRadioDisabled">Darth Vader</label>
-            <input type="radio" <?php if ($personagem == 9) echo "checked"; ?> class="form-check-input" id="personagem9" name="personagem" value="9">
+            <input type="checkbox" <?php if ($personagem[9] == 1) echo "checked"; ?> class="form-check-input" id="personagem9"  value="1">
+            <label class="form-check-label" for="personagem9">Darth Vader</label>
             <br>
-            <label class="form-check-label" for="flexRadioDisabled">Mestre Yoda</label>
-            <input type="radio" <?php if ($personagem == 10) echo "checked"; ?> class="form-check-input" id="personagem10" name="personagem" value="10">
+            <input type="checkbox" <?php if ($personagem[10] == 1) echo "checked"; ?> class="form-check-input" id="personagem10"  value="1">
+            <label class="form-check-label" for="personagem10">Mestre Yoda</label>
             <br><br>
-            <input class="btn btn-primary" type="submit" value="Enviar">
+            <input class="btn btn-primary" name="enviar" type="submit" value="Enviar">
         </form>
     </content>
 <?php
-    if(isset($_POST["personagem"])){
-        echo "<img src='img/$personagem.png' style='width: 10rem;'>";
+    function choice($var1){
+        if($var1 == 1){
+            echo "<img src='img/$var1.png' style='width: 10rem;'>";
+        }
+    }
+    if(isset($_POST["enviar"])){
+        for($i=1; $i<=10; $i++){
+            echo $personagem[$i];
+            //choice($personagem[$i]);
+        }
+        
     }
 ?>
 
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-

@@ -27,7 +27,7 @@
           <a class="nav-link active" aria-current="page" href="index3.php">Checkbox</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Radio</a>
+        <a class="nav-link active" aria-current="page" href="index4.php">Select multiple</a>
         </li>
     </div>
   </div>
